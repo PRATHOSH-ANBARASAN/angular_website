@@ -1,0 +1,93 @@
+
+
+<section class="container">
+    <div class="container bg-light border rounded w-50  p-3" id="login_section">
+        <h5 class="my-3 d-flex justify-content-center">Register <span class="text-success"> Now</span></h5> 
+        
+        <form action="" (ngSubmit)="onuserSubmit()" [formGroup]="userRegForm" class="register-form" novalidate>
+            
+            
+            <div class="">
+                <label for="" class="form-label" >Name :</label>
+                <input type="text" formControlName="Uname"  name="" id=""  class="form-control " >
+
+                @if (userRegForm.controls['Uname'].errors?.['required'] && userRegForm.controls['Uname'].touched) {
+                    <div class="text-danger ">
+                        <small>Name is required !</small>
+                    </div>
+                }
+            </div>
+
+
+            <div class="mt-3">
+                <label for="" class="form-label" >Email :</label>
+                <input type="text" formControlName="Uemail" name="" id="" placeholder="xyz@gmail.com" class="form-control mb-3" >
+
+                @if (userRegForm.controls['Uemail'].touched) {
+
+                    @if (userRegForm.controls['Uemail'].errors?.['required']) {
+                        <div class="text-danger ">
+                            <small>Email is required !</small>
+                        </div>
+                    }
+                    @if (userRegForm.controls['Uemail'].errors?.['pattern']) {
+                        <div class="text-danger ">
+                            <small>Invalid Email is required !</small>
+                        </div>
+                    }
+
+                }
+            </div>
+
+
+            <div class="mt-3">
+                <label for="" class="form-label ">Number :</label>
+                <input type="number" formControlName="Unumber" name="" id="" class="form-control  " >
+
+                @if (userRegForm.controls['Unumber'].touched) {
+
+                    @if (userRegForm.controls['Unumber'].errors?.['required']) {
+                        <div class="text-danger ">
+                            <small>Number is required !</small>
+                        </div>
+                    }
+                    @if (userRegForm.controls['Unumber'].errors?.['minLength']) {
+                        <div class="text-danger ">
+                            <small>Invalid min 10 char !</small>
+                        </div>
+                    }
+
+                }
+            </div>
+
+
+            <div class="mt-3">
+                <label for="" class="form-label ">Password :</label>
+                <input type="password" formControlName="Upassword" name="" id="" class="form-control  " >
+
+                @if (userRegForm.controls['Upassword'].touched) {
+
+                    @if (userRegForm.controls['Upassword'].errors?.['required']) {
+                        <div class="text-danger ">
+                            <small>Password is required !</small>
+                        </div>
+                    }
+                    @if (userRegForm.controls['Upassword'].errors?.['minLength']) {
+                        <div class="text-danger ">
+                            <small>Invalid min 6 number !</small>
+                        </div>
+                    }
+
+                }
+            </div>
+
+
+        
+
+
+            <p class="small mt-3">Already use ? <a class="text-decoration-none" href="">login</a></p>
+
+            <button type="submit" [disabled]="userRegForm.valid" class="btn btn-success py-1 mb-3 w-100">Sign-In</button>
+        </form>
+    </div>
+</section>

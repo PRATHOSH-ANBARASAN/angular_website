@@ -1,0 +1,45 @@
+.active-link{
+    color: green;
+    border-bottom: 3px solid green;
+}
+
+
+nav,header{
+    transition: 0.7s;
+    
+}
+
+#header-ul li a:hover{
+    color:green;
+    border-bottom: 3px solid green;
+}
+#header-ul li a{
+    transition: 0.7s ;
+    padding-bottom: 5px;
+    border-bottom: 3px solid transparent; 
+}
+
+header{
+    background-color: rgba(222, 184, 135, 0.429);
+}
+#navbar-side{
+    background-color: rgb(222, 184, 135);
+    flex-direction: column;
+
+}
+
+
+#header-ul li a{
+    color: rgb(14, 13, 13);  
+}
+
+#footer-section{
+    background-color: rgb(222, 184, 135);
+    border-top: 3px solid transparent;
+  
+}
+
+#footer-ul a{
+   font-size: 85%;
+
+}

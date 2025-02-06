@@ -1,0 +1,12 @@
+#home-section{
+    height: 85vh;
+}
+#home-id{
+    background-color: rgba(222, 184, 135, 0.429);
+}
+#card:hover{
+    background-color: rgba(0, 128, 0, 0.150);
+    border-color: green;
+    transition: 0.9s;
+    margin: 1px; 
+}

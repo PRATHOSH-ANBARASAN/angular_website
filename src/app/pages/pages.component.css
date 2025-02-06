@@ -1,0 +1,18 @@
+.display{
+    display: block;
+}
+
+
+
+#page-section{
+    background-color: rgba(222, 184, 135, 0.429);
+}
+#page-div{
+    background-color: rgba(0, 128, 0, 0.156)
+}
+
+#page-div:hover {
+    background-color: rgba(0, 128, 0, 0.69);
+    
+
+}
